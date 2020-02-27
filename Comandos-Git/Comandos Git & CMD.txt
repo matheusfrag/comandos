@@ -1,0 +1,59 @@
+Comandos Git & CMD
+
+**Windows**
+cd nome da pasta/												Ir para a pasta
+cd .. 															Voltar pasta
+mkdir nome-da-pasta												Criar pasta de projeto 
+ls -la 															Listar diretorio/arquivos e permissões
+cd .Git 														Acessar pasta Git 
+ls 																Listar arquivos
+
+
+
+**Git**
+git config --global user.name "Digite o nome do author"			Definir nome do usuario
+git config --global user.email "Digite o email"					Definir o nome do email do usuario
+git config user.name											Visualizar nome do usuario
+git config user.email											Visualizar email do ususario
+git config --list												Listar todas as configurações
+git init 														Inicializar serviço Git
+vi nome-do-arquivo.xx											Abrir editor de texto bash sobre o arquivo
+	i 																Iniciar edição de texto
+	Esc 															Sai da edição de texto
+	Shift+:															Tela de ações
+	wq																Para salvar alterações
+
+git status														Verificar status dos arquivos
+git add nome-do-arquivo											Adicionar arquivo para commit
+git commit -a || -m || -am "Comentarios"						Realixar commit com o comentario
+git log															Exibe log de commits
+git log --decorate													não me lembro
+git log --author="nome-do-usuario"								Pesquisa os logs do usuario selecionado
+git shortlog													Log resumido com os arquivos modificados por cada usuario
+git shortlog -sn 												Log resumido mostrando a quantidade de arquivos modificados por usuario
+git log --graph													Mostra em grafico os branchs do Git
+git show hash													Mostra todos os detalhes do Commit
+git diff														Mostra as mudanças do arquivo
+git diff --name-only												não me lembro
+git show 														Mostra a modificação do arquivo
+git checkout nome-do-arquivo 									Desfaz a modificação antes de estar pronto para commit
+git reset HEAD nome-arquivo 									Desfaz a preparação para commit permitindo desfazer alterações no arquivo
+git reset --soft hash											Mata o commit e deixa em estado de pronto para commit com as modificações nele
+	**Selecionar hash que quer voltar e todas as posteriores serão removidas
+git reset --mixed hash											Mata o commit e volta com ele de antes de pronto para commit com as modificações
+	**Selecionar hash que quer voltar e todas as posteriores serão removidas
+git reset --hard hash											Mata o commit e todas as mudanças realizadas no arquivo
+	**Selecionar hash que quer voltar e todas as posteriores serão removidas
+git checkout -b nome-branch										Cria um branch
+git branch 														Exibe os branch | comasteristo e o em uso no momento
+git checkout nome-branch 										Trocar de Branch
+git branch -D nome-branch										Deleta o branch
+
+
+**GitHub**
+$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"			Gerar chave SSH
+cd ~/.SSH 														Acessar pasta com a chave ssh
+cat id_rsa.pub													Arquivo que contem a chave ssh publica
+git remote add origin git@github.com:caminho-github				Conectar a um diretorio remoto	
+git remote														Visualiza projeto github
+git push nome-local-remoto nome-local 							Envia para o Github as alterações indicando origem-remoto origem-local
